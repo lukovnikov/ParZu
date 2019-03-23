@@ -15,4 +15,4 @@ RUN git clone https://github.com/lukovnikov/ParZu
 RUN (cd ParZu; bash install.sh)
 
 WORKDIR /ParZu
-CMD python parzu_server.py --host 0.0.0.0
+CMD python parzu_server.py -p 5678
