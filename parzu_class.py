@@ -561,9 +561,10 @@ def process_by_sentence(processor, sentences):
     sentences_out = []
     for sentence in sentences:
         words = []
+        print("sentence: ", sentence)
         processor.send(sentence + '\n')
         while True:
-            print(processor.read())
+            # print(processor.read())
             word = processor.readline().strip()
             print("word: ", word)
             if word:
