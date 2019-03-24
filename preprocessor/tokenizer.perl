@@ -97,7 +97,7 @@ sub tokenize {
 	
 	#word token method
 	my @words = split(/\s/,$text);
-	$text = "";
+	$text = "|";
 	for (my $i=0;$i<(scalar(@words));$i++) {
 		my $word = $words[$i];
 		if ( $word =~ /^(\S+)\.$/) {
@@ -110,7 +110,7 @@ sub tokenize {
 				$word = $pre." .";
 			}
 		}
-		$text .= $word." ";
+		$text .= $word."|| ";
 	}		
 
 	# clean up extraneous spaces
