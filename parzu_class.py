@@ -316,6 +316,8 @@ class Parser():
                 sentences = self.tokenize(text)
         else:
             sentences = text.split('\n\n')
+        print("ParZu tokenized sentences")
+        print(sentences)
 
         if outputformat == 'tokenized':
             return sentences
