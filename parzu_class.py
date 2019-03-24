@@ -565,10 +565,10 @@ def process_by_sentence(processor, sentences):
         processor.send(sentence + '\n')
         while True:
             # print(processor.read_nonblocking(size=))
-            word = processor.readline()
+            word = processor.readline().strip()
             print("word: ", word)
             if word:
-                words.append(word.strip())
+                words.append(word[1:])
             else:
                 break
         sentences_out.append('\n'.join(words))
