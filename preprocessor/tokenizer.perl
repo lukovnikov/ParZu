@@ -110,7 +110,7 @@ sub tokenize {
 				$word = $pre." .";
 			}
 		}
-		$text .= "|".$word." ";
+		$text .= $word." ";
 	}		
 
 	# clean up extraneous spaces
