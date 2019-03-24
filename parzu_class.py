@@ -381,6 +381,9 @@ class Parser():
         else:
             sentences = self.punkt_tokenizer.tokenize(text)
 
+        print("ParZu Parser tokenize sentences")
+        print(sentences)
+
         sentences = process_by_sentence(self.tokenizer, sentences)
 
         return sentences
